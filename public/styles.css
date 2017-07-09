@@ -1,6 +1,6 @@
 body {
-  background-color: #538cc6;
-  font-family: 'Open Sans', sans-serif;
+  background-color: #b3b3cc;
+  font-family: 'Droid Sans', sans-serif;
 }
 
 html, body {
@@ -9,7 +9,7 @@ html, body {
 }
 
 h1, h2, h3 {
-  font-family: 'Rancho', cursive;
+  font-family: 'Kreon', serif;
 }
 
 #headshot {
@@ -38,17 +38,22 @@ a.icon {
 
 span.link  {
   display: inline;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Droid Sans', sans-serif;
   font-size: 16px;
 }
 
 .about {
-  background-color: #538cc6;
+  background-color: #b3b3cc;
 }
 
 .work {
   background-color: #f3f3f3;
   width: 100%;
+}
+
+#sample {
+  padding-top: 25px;
+  padding-left: 25px;
 }
 
 .projects {
@@ -59,8 +64,6 @@ span.link  {
 }
 
 .projects img {
-  margin-right: 15px;
-  margin-left: 15px;
   float: left;
 }
 
@@ -85,7 +88,7 @@ form {
 
 .form {
   background-color: #f3f3f3;
-  padding: 20px;
+  padding: 25px;
 }
 
 .red {
@@ -99,5 +102,4 @@ form {
 button {
   padding: 5px;
   border-radius: 5px;
-  background-color: #538cc6;
 }
