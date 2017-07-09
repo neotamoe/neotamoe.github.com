@@ -4,12 +4,11 @@
     <meta charset="utf-8">
     <title>Neota Moe | Software Developer</title>
     <script src="vendors/angular.min.js" charset="utf-8"></script>
-    <!-- <script src="vendors/angular-route.min.js" type="text/javascript" charset="utf-8"></script> -->
     <script src="script.js" type="text/javascript" charset="utf-8"></script>
-    <!-- <script src="indexController.js" type="text/javascript" charset="utf-8"></script> -->
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Kreon" rel="stylesheet">
     <link rel="stylesheet" href="vendors/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
   </head>
   <body ng-app="myApp" ng-controller="IndexController as i">
     <header>
@@ -90,7 +89,9 @@
         <span class="green" ng-if="i.contactSent">{{i.sentMessage}}</span>
       </form>
     </div>
-
+    <footer>
+      Copyright <i class="fa fa-copyright"></i>2017 Neota Moe
+    </footer>
 
   </body>
 </html>

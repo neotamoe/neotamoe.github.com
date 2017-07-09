@@ -44,6 +44,7 @@ span.link  {
 
 .about {
   background-color: #b3b3cc;
+  text-align: justify;
 }
 
 .work {
@@ -102,4 +103,9 @@ form {
 button {
   padding: 5px;
   border-radius: 5px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
 }
