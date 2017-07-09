@@ -2,32 +2,89 @@
 <html>
   <head>
     <meta charset="utf-8">
-
-    <title>Neota Moe</title>
-    <script src="angular.min.js" charset="utf-8"></script>
+    <title>Neota Moe | Software Developer</title>
+    <script src="vendors/angular.min.js" charset="utf-8"></script>
+    <!-- <script src="vendors/angular-route.min.js" type="text/javascript" charset="utf-8"></script> -->
     <script src="script.js" type="text/javascript" charset="utf-8"></script>
+    <!-- <script src="indexController.js" type="text/javascript" charset="utf-8"></script> -->
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Rancho" rel="stylesheet">
     <link rel="stylesheet" href="vendors/font-awesome-4.7.0/css/font-awesome.min.css">
   </head>
-  <body>
+  <body ng-app="myApp" ng-controller="IndexController as i">
     <header>
-      <img id="headshot" src="headshot.jpg" alt="headshot">
+      <img id="headshot" src="images/headshot.jpg" alt="headshot">
       <h1>Neota Moe, MSW, LICSW</h1>
-      <h2>Software Developer formerly disguised as a Social Worker</h2>
+      <h2>Software Developer formerly disguised as a Clinical Social Worker</h2>
       <a href="http://linkedin.com/in/neotamoe"><i class="fa fa-linkedin-square fa-2x"></i></a>
       <a href="http://github.com/neotamoe"><i class="fa fa-github fa-2x"></i></a>
     </header>
+    <div class="work">
+      <div class="projects">
+        <img class="screenshot" src="images/solo.png" alt="screenshot">
+        <h3 class="description">Sci123 Quiz App</h3>
+        <p class="description">Solo project created during a two week period during my time at Prime Digital Academy.  The quiz app is designed to complement a general education science course
+          at Augsburg College (Sci123: Science of Food and Cooking).  This full stack web application includes a mongoDB with over 1000 quiz questions.  Questions are sorted by chapter
+          as well as assigned up to 5 tags.  Students sign in to quiz themself on course content or submit a new question for inclusion in the database.  Questions can be
+          selected by chapter or by tag/keyword.  Application administrator is notified by email when a student flags a question for review or submits a
+          question for inclusion in the databse.  The administrator can edit, save or delete flagged or newly-submitted questions from the database.</p>
+      </div>
+      <div class="projects">
+        <img class="screenshot" src="images/group.png" alt="screenshot">
+        <h3>St Croix Valley Interactive Map</h3>
+        <p>Interactive map with administrator view/privileges created for client (St Croix Valley Regional Tourism Alliance) for group project at Prime Digital Academy with
+          three other students/contributors.  Application was completed over a three week period.  I wrote a variety of code, but the bulk of it involved front-end and client-side
+          code including modals, map properties, displaying custom map markers, navigation bar (accommodating mobile and non-mobile screen size), </p>
+      </div>
+      <div class="projects">
+        <img class="screenshot" src="images/movieAPI.png" alt="screenshot">
+        <h3>OMDB Movie API</h3>
+        <p></p>
+      </div>
+      <div class="projects">
+        <img class="screenshot" src="images/highfives.png" alt="screenshot">
+        <h3>Angular High Fives</h3>
+        <p></p>
+      </div>
+      <div class="projects">
+        <img class="screenshot" src="images/serversidecalc.png" alt="screenshot">
+        <h3>Server Side Calculator</h3>
+        <p></p>
+      </div>
+      <div class="about">
+        <h2>About Me</h2>
+        <p>I am a Licensed Independent Clinical Social Worker turned Software Developer with over a
+          decade of experience in fast-paced medical settings.  My background as a social worker uniquely equips me
+          with skills for working on teams with a wide variety of people and how to work on both a micro and macro
+          level.  I am seeking a position that encourages and expects continued growth and development and will allow
+          me to contribute to a team from day one.</p>
+        <p>I utilize my combination of technical software developer skills and social work training to write clear code,
+          solve problems, and create positive and effective working relationships with clients and team members.  Context-switching,
+          multi-tasking, and managing change are integral to productivity and inherent in my day to day work.  I
+          believe writing good code is only part of what makes a developer great and believe my ability to view situations
+          from different perspectives complement my technical abilities and knowledge.  I am detail-oriented, hard-working, and hold
+          myself to high standards and expectations.  I am a natural leader, team-builder and collaborator.</p>
+        <p>I truly consider no job is too big and no task is too small; I know that often doing the things that aren’t
+          written in the job description are integral to getting things done and contributing to a team.  I believe asking
+          questions is good, asking the right question is better and doing something with the answer is even better.</p>
+        <p>I earned a Master of Social Work from University of Washington and a Bachelor of Arts in Sociology and Spanish from
+          University of Minnesota, Morris.</p>
+      </div>
+    </div>
 
-<div class="form">
-  <form class="contactMe" name="contactMe">
-    <label for="name">Name:</label><br>
-    <input type="text" name="name" placeholder="your name" value="" size="50"><br>
-    <label for="email">Email Address:</label><br>
-    <input type="text" name="email" placeholder="youremail@yourdomain.com" value="" size="50"><br>
-    <textarea name="talkToMe" rows="8" cols="80" placeholder="Talk to Me!"></textarea><br>
-  </form>
-</div>
+    <div class="form">
+      <form class="contactMe" name="contactMe">
+        <label for="name">Name:</label><br>
+        <input type="text" name="name" placeholder="" ng-model="i.name" value="" size="51"><br>
+        <label for="email">Email Address:</label><br>
+        <input type="email" name="email" placeholder="" ng-model="i.email" value="" size="51"><br>
+        <label for="talkToMe">Talk to Me!</label><br>
+        <textarea name="talkToMe" rows="8" cols="50" placeholder="" ng-model="i.talkToMe"></textarea><br>
+        <button type="button" name="button" ng-click="i.send()">Send</button>
+        <span class="red" ng-if="i.contactError">{{i.errorMessage}}</span>
+        <span class="green" ng-if="i.contactSent">{{i.sentMessage}}</span>
+      </form>
+    </div>
 
 
   </body>
