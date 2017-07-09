@@ -6,7 +6,7 @@ var path = require('path');
 var contact = require('./routes/contactMeForm');
 
 // globals
-var port = 3000 || process.env.PORT;
+var port = process.env.PORT || 3000;
 
 // body parser middleware
 app.use(bodyParser.json());
