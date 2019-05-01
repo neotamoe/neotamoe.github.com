@@ -4,11 +4,12 @@ var router = express.Router();
 var path = require('path');
 var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
-import password from '../password';
+var password = require('../password');
 
-var secretPassword = process.env.PASSWORD || password;
+var secretPassword = process.env.PASSWORD || password.password;
 
 router.post('/', function(req,res){
+  console.log('password: ', password.password);
   console.log('req.body:', req.body);
 
   var transporter = nodemailer.createTransport({
