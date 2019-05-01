@@ -4,12 +4,11 @@ var router = express.Router();
 var path = require('path');
 var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
-var password = require('../password');
+// var password = require('../password');  // need for local dev, causes errors when deploy to heroku
 
 var secretPassword = process.env.PASSWORD || password.password;
 
 router.post('/', function(req,res){
-  console.log('password: ', password.password);
   console.log('req.body:', req.body);
 
   var transporter = nodemailer.createTransport({
