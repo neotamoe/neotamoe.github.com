@@ -4,6 +4,9 @@ var router = express.Router();
 var path = require('path');
 var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
+import password from '../password';
+
+var secretPassword = process.env.PASSWORD || password;
 
 router.post('/', function(req,res){
   console.log('req.body:', req.body);
@@ -14,7 +17,7 @@ router.post('/', function(req,res){
       secure: true, // secure:true for port 465, secure:false for port 587
       auth: {
           user: 'science123app@gmail.com',
-          pass: 'Science123'
+          pass: secretPassword
       }
   });
   // this is email to be sent to admin
