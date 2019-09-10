@@ -1,5 +1,5 @@
 body {
-  background-color: #b3b3cc;
+  background-color: #82B4C4;
   font-family: 'Droid Sans', sans-serif;
 }
 
@@ -44,14 +44,13 @@ span.link  {
 }
 
 .about {
-  background-color: #b3b3cc;
   text-align: justify;
 }
 
 .work {
-  background-color: #f3f3f3;
+  background-color: #FF9C36;
   width: 100%;
-  height: 25px;
+  height: 4px;
 }
 
 #sample {
@@ -60,7 +59,7 @@ span.link  {
 }
 
 .projects {
-  background-color: #f3f3f3;
+  background-color: #FF9C36;
   text-align: justify;
   overflow: hidden;
   margin: 25px;
@@ -90,7 +89,6 @@ form {
 }
 
 .form {
-  background-color: #f3f3f3;
   padding: 25px;
 }
 
@@ -111,3 +109,12 @@ footer {
   text-align: center;
   padding: 25px;
 }
+
+/* 
+Color Scheme:
+  #82B4C4 - blue gray blue-ish - background
+  #5CD6FF - sky blue-ish
+  #00C0FF - robin egg blue-ish
+  #C2A282 - beige-tan-ish
+  #FF9C36 - tangerine-ish orange - divider stripes
+*/
