@@ -33,6 +33,10 @@ a.icon {
   color: black;
 }
 
+a.icon:hover {
+  color: #FF9C36;
+}
+
 .about, .projects {
   padding: 25px;
 }
